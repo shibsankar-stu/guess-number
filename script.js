@@ -17,6 +17,7 @@ btn.addEventListener("click", () => {
             preGuess.innerText++
             guessRemaining.innerText--;
             input.value = '';
+           
         }else{
             result.innerText = "Opss!🥹";
             guessRemaining.innerText--;
@@ -44,5 +45,12 @@ function checkValue(){
     }
 }
 rePlay.addEventListener("click", () => {
+    speak("My name is shibsankar das lets play together")
     window.location.reload();
 })
+
+function speak(text){
+    let text_speak = new SpeechSynthesisUtterance(text);
+    // text_speak.lang = "hi-GB";
+    window.speechSynthesis.speak(text_speak)
+}
