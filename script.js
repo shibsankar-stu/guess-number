@@ -4,7 +4,7 @@ let btn = document.getElementById("btn")
 let rePlay = document.getElementById("rePlay")
 let preGuess = document.getElementById("preGuess")
 let guessRemaining = document.getElementById("guessRemaining")
-
+speak("My name is shibsankar das lets play togethe")
 preGuess.innerText = 0;
 guessRemaining.innerText = 10;
 btn.addEventListener("click", () => {
@@ -45,7 +45,6 @@ function checkValue(){
     }
 }
 rePlay.addEventListener("click", () => {
-    speak("My name is shibsankar das lets play together")
     window.location.reload();
 })
 
@@ -54,3 +53,4 @@ function speak(text){
     // text_speak.lang = "hi-GB";
     window.speechSynthesis.speak(text_speak)
 }
+
